@@ -5,8 +5,10 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh; /* Use min-height to ensure it works on smaller screens */
   color: #000; /* Black text */
+  padding: 20px; /* Add padding to prevent content from touching the edges */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
 }
 
 .checklist {
@@ -14,7 +16,8 @@ body {
   padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  width: 750px;
+  width: 100%; /* Make it responsive */
+  max-width: 750px; /* Limit maximum width */
 }
 
 .checklist h1 {
@@ -30,10 +33,12 @@ ul {
   font-weight: bold;
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 li {
   margin: 10px 0;
+  text-align: left; /* Align text to the left */
 }
 
 input[type="checkbox"] {
@@ -52,21 +57,6 @@ label:hover {
 input[type="checkbox"]:checked + label {
   text-decoration: line-through;
   color: #008000;
-}
-
-#show-modal {
-  padding: 10px 20px;
-  font-size: 1em;
-  color: #fff; /* White text */
-  background-color: #ff8c42; /* Orange button */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#show-modal:hover {
-  background-color: #e67e22; /* Darker orange on hover */
 }
 
 /* Modal Styling */
@@ -88,7 +78,8 @@ input[type="checkbox"]:checked + label {
   border-radius: 10px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  width: 550px;
+  width: 90%; /* Make modal responsive */
+  max-width: 550px; /* Limit maximum width */
   position: relative;
   color: #000; /* Black text */
 }
@@ -124,29 +115,13 @@ h1 {
   margin-bottom: 20px;
 }
 
-#increase-streak {
-  padding: 10px 20px;
-  font-size: 1em;
-  color: #fff; /* White text */
-  background-color: #ff8c42; /* Orange button */
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-#increase-streak:hover {
-  background-color: #e67e22; /* Darker orange on hover */
-}
-
 #motive {
   color: #40434e;
   font-size: 20px;
   font-weight: bold;
 }
 
-/* fire */
-
+/* Fire Animation */
 svg {
   width: 8em;
 }
@@ -178,38 +153,70 @@ svg {
   100% {
     transform-origin: bottom right;
     transform: rotate(4deg);
-    /*       transform: translateY(-.5em); */
   }
 }
 
 .cirGroup1 {
-  animation: 0.8s circles infinite; /* Changed from 1.6s to 0.8s */
+  animation: 0.8s circles infinite;
 }
 
 .cirGroup2 {
-  animation: 1.5s circles infinite; /* Changed from 3s to 1.5s */
+  animation: 1.5s circles infinite;
 }
 
 .cirGroup3 {
-  animation: 3s circles infinite; /* Changed from 6s to 3s */
+  animation: 3s circles infinite;
 }
 
 .flame {
-  animation: flame 1s ease-in-out infinite alternate; /* Changed from 2s to 1s */
+  animation: flame 1s ease-in-out infinite alternate;
 }
 
 .flame2 {
-  animation: flame 0.8s ease-in-out infinite alternate; /* Changed from 1.6s to 0.8s */
+  animation: flame 0.8s ease-in-out infinite alternate;
 }
 
 .flame3 {
-  animation: flame 0.625s ease-in-out infinite alternate; /* Changed from 1.25s to 0.625s */
+  animation: flame 0.625s ease-in-out infinite alternate;
 }
 
 .sideFlame1 {
-  animation: sideFlame1 1.25s ease-in-out infinite alternate; /* Changed from 2.5s to 1.25s */
+  animation: sideFlame1 1.25s ease-in-out infinite alternate;
 }
 
 .sideFlame {
-  animation: sideFlame 0.55s ease-in-out infinite alternate; /* Changed from 1.10s to 0.55s */
+  animation: sideFlame 0.55s ease-in-out infinite alternate;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  ul {
+    flex-direction: column; /* Stack items vertically */
+    align-items: flex-start; /* Align items to the left */
+    padding-left: 20px; /* Add some padding to align with the heading */
+  }
+
+  .checklist {
+    width: 90%; /* Adjust width for smaller screens */
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+
+  .modal-content {
+    width: 90%; /* Adjust modal width for smaller screens */
+    padding: 15px; /* Reduce padding for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .checklist h1 {
+    font-size: 20px; /* Reduce font size for smaller screens */
+  }
+
+  #completion {
+    font-size: 24px; /* Reduce font size for smaller screens */
+  }
+
+  #motive {
+    font-size: 18px; /* Reduce font size for smaller screens */
+  }
 }
