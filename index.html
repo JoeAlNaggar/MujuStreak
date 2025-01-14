@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muju Streak 🔥</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="art.png" type="image/x-icon" />
+  </head>
+  <body>
+    <!-- Main Page Content -->
+    <div class="checklist">
+      <h1>Muju Animation Challenge ❤️‍🔥</h1>
+      <ul>
+        <div>
+          <li>
+            <input type="checkbox" id="day1" /><label for="day1"
+              >Day 1: Walk cycle</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day2" /><label for="day2"
+              >Day 2: Ball bounce</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day3" /><label for="day3"
+              >Day 3: Bowling ball bounce</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day4" /><label for="day4"
+              >Day 4: Ball bounce down stairs</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day5" /><label for="day5"
+              >Day 5: Swingset swing (no rider)</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day6" /><label for="day6"
+              >Day 6: Leaf drop</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day7" /><label for="day7"
+              >Day 7: Splash</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day8" /><label for="day8"
+              >Day 8: Flour sack drop</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day9" /><label for="day9"
+              >Day 9: Flour sack test</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day10" /><label for="day10"
+              >Day 10: Flour sack test</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day11" /><label for="day11"
+              >Day 11: Head turn</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day12" /><label for="day12"
+              >Day 12: Hairflip</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day13" /><label for="day13"
+              >Day 13: Jump</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day14" /><label for="day14"
+              >Day 14: Heavy jump</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day15" /><label for="day15"
+              >Day 15: Fall</label
+            >
+          </li>
+        </div>
+        <div>
+          <li>
+            <input type="checkbox" id="day16" /><label for="day16"
+              >Day 16: Light object lift</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day17" /><label for="day17"
+              >Day 17: Heavy object lift</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day18" /><label for="day18"
+              >Day 18: Throw</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day19" /><label for="day19"
+              >Day 19: Subtle expression change</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day20" /><label for="day20"
+              >Day 20: Dramatic expression change</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day21" /><label for="day21"
+              >Day 21: Sigh</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day22" /><label for="day22"
+              >Day 22: Lip sync</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day23" /><label for="day23"
+              >Day 23: Wave (or other expressive action)</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day24" /><label for="day24"
+              >Day 24: Spin</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day25" /><label for="day25"
+              >Day 25: Animate straight ahead</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day26" /><label for="day26"
+              >Day 26: Animate pose-to-pose</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day27" /><label for="day27"
+              >Day 27: Walk cycle again</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day28" /><label for="day28"
+              >Day 28: Run cycle</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day29" /><label for="day29"
+              >Day 29: Clean up any animation</label
+            >
+          </li>
+          <li>
+            <input type="checkbox" id="day30-31" /><label for="day30-31"
+              >Day 30(+31): Whatever you want</label
+            >
+          </li>
+        </div>
+      </ul>
+      <!-- <button id="show-modal">Show Streak Count</button> -->
+    </div>
+
+    <!-- Modal -->
+    <div id="streak-modal" class="modal">
+      <div class="modal-content">
+        <span id="close-modal" class="close">&times;</span>
+        <h1>Daily Animation Challenge Completed ! ✅</h1>
+        <p id="completion">
+          Completion Streak: <span id="streak-count">0 days</span>
+        </p>
+        <p id="motive">Muju Muju Muju 🤩🤩🤩</p>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 185.68 238.8">
+          <defs>
+            <style>
+              .cls-1 {
+                fill: #fc7226;
+              }
+              .cls-2 {
+                fill: #fc8223;
+              }
+              .cls-3 {
+                fill: #fc8223;
+              }
+              .cls-4 {
+                fill: #fc9823;
+              }
+            </style>
+          </defs>
+          <title>Fire</title>
+
+          <g class="cir" data-name="Layer 5">
+            <circle class="cls-1 cirGroup1" cx="59.04" cy="98.87" r="3.48" />
+
+            <circle
+              id="my-circle"
+              class="cls-1 cirGroup2"
+              cx="35.53"
+              cy="189.04"
+              r="6.31"
+            />
+            <circle class="cls-1 cirGroup1" cx="145.7" cy="197.82" r="6.31" />
+            <circle
+              id="my-circle1"
+              class="cls-1 cirGroup2"
+              cx="159.7"
+              cy="173.67"
+              r="3.47"
+            />
+            <circle class="cls-1 cirGroup3" cx="48.51" cy="159.07" r="3.47" />
+            <circle class="cls-1 cirGroup3" cx="141.07" cy="137.56" r="2.45" />
+            <circle
+              id="my-circle2"
+              class="cls-1 cirGroup2"
+              cx="100.67"
+              cy="131.2"
+              r="2.45"
+            />
+          </g>
+
+          <g data-name="Layer 3">
+            sideFlames
+            <path
+              class="cls-2 sideFlame1"
+              d="M47.38,151c-9.76-4-34.9-17.48-34.9-17.48s2.29,46,15,68.12l.06.1q.33.58.68,1.13l.25.41a30.73,30.73,0,0,0,3.93,5.06l.18.17a34,34,0,0,0,46.91,2.17c14.19-12.33,16.39-34.45,3.38-48C71,150.36,57.14,155.07,47.38,151Z"
+            />
+            <path
+              class="cls-2 sideFlame"
+              d="M136.58,149c9.76-4,34.9-17.48,34.9-17.48s-2.29,46-15,68.12l-.06.1q-.33.58-.68,1.13l-.25.41a30.73,30.73,0,0,1-3.93,5.06l-.18.17a34,34,0,0,1-46.91,2.17c-14.19-12.33-16.39-34.45-3.38-48C112.91,148.36,126.82,153.07,136.58,149Z"
+            />
+            <path
+              class="cls-1 flame"
+              d="M158.83,151.17C145.08,107.52,91.48,42.72,91.48,42.72S39.85,107.18,25.64,148.44a60.27,60.27,0,0,0-5.34,24.82c0,20.82,10.67,39.35,27.26,51.29l.59.42,1.26.87A75.2,75.2,0,0,0,92,238.8c39.32,0,71.19-29.19,71.19-65.2A60.19,60.19,0,0,0,158.83,151.17Z"
+            />
+            <path
+              class="cls-3 flame3"
+              d="M147.49,159.2c-11.43-39.6-56-98.38-56-98.38s-42.9,58.47-54.71,95.91a59.16,59.16,0,0,0,18.21,69l.49.38,1,.79a59.16,59.16,0,0,0,90.93-67.74Z"
+            />
+            <path
+              class="cls-4 flame2"
+              d="M141.34,174.68c-10.17-31.89-49.79-79.23-49.79-79.23s-38.17,47.09-48.68,77.23a43.59,43.59,0,0,0-4,18.13c0,15.21,7.89,28.75,20.15,37.47l.43.31.93.64a56.06,56.06,0,0,0,31.48,9.47c29.06,0,52.63-21.33,52.63-47.63A43.52,43.52,0,0,0,141.34,174.68Z"
+            />
+          </g>
+        </svg>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
